@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet/less" type="text/css" href="style.less" />
+    <script src="https://cdn.jsdelivr.net/npm/less"></script>
+    <title>Modal</title>
+</head>
+<body class="modal-container">
+    <div class="modal-wrapper">
+        <div class="modal">
+            <div class="modal-header">
+                <div class="modal-header__title">
+                    <p>Редактирование поступления</p>
+                    <button class="modal-header__btn-close"><img src="images/close.svg" alt=""></button>
+                </div>
+                <div class="modal-header__subtitle">
+                    <div class="modal-header__subtitle-item">Документ</div>
+                    <div class="modal-header__subtitle-item--right">Банковский ордер № 888015</div>
+                </div>
+            </div>
+            <div class="modal-body">
+                <div class="modal-body__left">
+                    <div class="modal-body__date">
+                        <p class="label">Дата</p>
+                        <p class="date">11 апр 2024г.</p>
+                    </div>
+                    <div class="modal-body__sum">
+                        <p class="label">Сумма</p>
+                        <p class="number">1290.00</p>
+                    </div>
+                </div>
+                <div class="modal-body__right">
+                    <div class="modal-body__purpose">
+                        <p class="label">Назначение</p>
+                        <p class="text">Комиссия за ПУ Набирая Обороты за период с '12/04/2024' по '11/05/2024' <br> дог.40703810062000004095. НДС не взимается.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-group">
+                <div class="modal-group__column">
+                    <p class="label">Контрагент</p>
+                    <p class="text">АНО "ПЭТ"</p>
+                </div>
+                <div class="modal-group__column-center">
+                    <div>
+                        <p class="label">ИНН</p>
+                        <p class="text">1655378684</p>
+                    </div>
+                    <div>
+                        <p class="label">Номер счета</p>
+                        <p class="text">40703810062000004095</p>
+                    </div>
+                </div>
+                <div class="modal-group__column">
+                    <div>
+                        <p class="label">Банк</p>
+                        <p class="text">отделение "Банк Татарстан" №8610<br>ПАО Сбербанк, г.Казань</p>
+                    </div>
+                    <div>
+                        <p class="label">БИК</p>
+                        <p class="text">049205603</p>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-form">
+                <div class="modal-form__row">
+                    <div class="modal-form__item">
+                        Контрагент
+                    </div>
+                    <div class="field">
+                        <select name="agent" id="agent" class="select select--agent">
+                            <option value="1">"АНО "ПЭТ"</option>
+                        </select>
+                        <img src="/images/modaleditor.svg" alt="">
+                        <img src="/images/modalplus.svg" alt="">
+                    </div>
+                </div>
+                <div class="modal-form__row">
+                    <div class="modal-form__item">
+                        Тип поступления
+                    </div>
+                    <div class="field">
+                        <select name="type" id="type" class="select" required>
+                            <option value="1">Правомерное</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="modal-form__row">
+                    <div class="modal-form__item">
+                        Тип средств
+                    </div>
+                    <div class="field">
+                        <select name="money" id="money" class="select">
+                            <option value="1">Пожертвование</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="modal-form__row">
+                    <div class="modal-form__item">
+                        Тип плательщика
+                    </div>
+                    <div class="field">
+                        <select name="typeof" id="typeof" class="select">
+                            <option value="1">Юр.лицо</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-requisites">
+                <div class="modal-requisites__text">
+                Строка отчета
+                </div>
+                <div class="text-field">
+                   <textarea id="story" name="story" rows="5" cols="120" wrap="hard" readonly>ИНН 1655378684, АНО "ПЭТ" р/с № 40703810062000004095 отделение "Банк Татарстан" №8610 ПАО Сбербанк, г.Казань БИК 049205603</textarea>
+                </div>
+            </div>
+            <div class="modal-buttons">
+                <div class="modal-buttons__left">
+                    <button class="header-information__btn-download">
+                        <img src="/images/undo.svg" alt="">
+                        Возврат
+                    </button>
+                    <button class="header-information__btn-download">
+                        <img src="/images/undo.svg" alt="">
+                        Возврат Возврата
+                    </button>
+                </div>
+                <div class="modal-buttons__right">
+                    <button class="header-information__btn-download header-information__btn-download--cancel">
+                        <img src="/images/close.svg" alt="">
+                        Отмена
+                    </button>
+                    <button class="header-information__btn-download header-information__btn-download--distribute">
+                        <img src="/images/multi.svg" alt="">
+                        Распределить
+                    </button>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <div class="modal-footer__previous">
+                    <img width="16" height="16" src="/images/arrowleft.svg" alt="">
+                    Предыдущий
+                </div>
+                <div class="modal-footer__next">
+                    Следующий
+                    <img width="16" height="16" src="/images/arrowright.svg" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

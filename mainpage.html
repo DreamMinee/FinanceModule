@@ -11,7 +11,7 @@
 </head>
 <body class="container">
 <!--HEADER-->
-    <header class="shadow">
+    <header>
         <div class="header-logo">
             <img src="/images/logo.svg" alt="Favicon">
         </div>
@@ -32,7 +32,7 @@
             </div>
             <div class="header-information__bottom-container">
                 <nav class="header-menu">
-                    <a href="#1" class="header-menu__link">Поступления</a>
+                    <a href="#1" class="header-menu__link header-menu__link--dropdown">Поступления</a>
                     <a href="#2" class="header-menu__link">Платежи</a>
                     <a href="#3" class="header-menu__link">Договоры</a>
                     <a href="#4" class="header-menu__link">Опись</a>
@@ -48,40 +48,17 @@
             </div>
         </div>
     </header>
-    <main class="main">
-        <div class="body-information">
-            <div class="body-information__left">
-                <div class="body-information__item">
-                    <h1 class="body-information__title">Платежи</h1>
-                </div>
-                <div class="body-information__item">
-                    <button class="body-information__btn"><img src="/images/whiteplus.svg" alt="">Внести расходную кассовую операцию</button>
-                </div>
-                <div class="body-information__item">Новых&nbsp;(5)</div>
-                <div class="body-information__item">Распределенных&nbsp;(6)</div>
-            </div>
-            <div class="body-information__right">
-                <div class="body-information__item">
-                    <div class="body-information__search-input">
-                        <label for="body-information__search-input"></label>
-                        <input id="body-information__search-input" type="search" placeholder="Поиск"/>
-                        <button type="submit" class="search-btn"><img src="/images/search.svg" alt=""></button>
-                    </div>
-                </div>
-                <div class="body-information__item">
-                  <button type="submit" class="update-btn"><img src="/images/update.svg" alt=""></button>
-                </div>
-                <div class="body-information__item">
-                  <button class="body-information__btn-count"><span>10</span><img src="/images/arrowdown.svg" alt=""></button>
-                </div>
-                <div class="body-information__item">
-                  <button class="body-information__btn-filter"><img src="/images/filter.svg" alt=""></button>
-                </div>
-                <div class="body-information__item">
-                  <button class="body-information__btn-settings"><img src="images/settings.svg" alt=""></button>
-                </div>
-              </div>
+    <div class="body-information body-information--dropdown-list body-information shadow">
+        <div class="body-information__left body-information__left--dropdown-list body-information--margin-left">
+            <div class="body-information__item body-information__item--dropdown-list">Новые</div>
+            <div class="body-information__item body-information__item--dropdown-list">Распределенные</div>
+            <div class="body-information__item body-information__item--dropdown-list">Неправомерные</div>
+            <div class="body-information__item body-information__item--dropdown-list">Отложенные</div>
+            <div class="body-information__item body-information__item--dropdown-list">Возвраты поступлений</div>
+            <div class="body-information__item body-information__item--dropdown-list">Возвраты возвратов</div>
         </div>
+    </div>
+    <main class="main main--mainpage">
         <div class="table">
             <table>
                 <thead>
@@ -94,7 +71,7 @@
                 </tr>
                 </thead>
             </table>
-            <div class="table-wrapper table-wrapper--indexpage">
+            <div class="table-wrapper table-wrapper--mainpage">
                  <table>
                      <tbody>
                      <tr>
